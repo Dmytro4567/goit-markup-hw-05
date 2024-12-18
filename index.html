@@ -416,10 +416,12 @@
             </ul>
         </div>
         <div class="footer-subscribe">
-            <p class="footer-subscribe-header">Social media</p>
+            <p class="footer-subscribe-header">Subscribe</p>
             <form class="footer-subscribe-form">
-                <input class="footer-subscribe-email" type="email" name="footer-email" id="footer-email">
-                <button class="footer-subscribe-button" type="button">
+                <label class="footer-subscribe-label">
+                    <input class="footer-subscribe-email" type="email" name="footer-email" id="footer-email" placeholder="E-mail">
+                </label>
+                <button class="footer-subscribe-button" type="submit">
                     Subscribe
                     <svg width="24" height="24" class="footer-subscribe-icon">
                         <use href="./images/icons.svg#icon-telegram"></use>
@@ -456,11 +458,13 @@
                 </svg>
             </div>
             <label class="modal-label" for="comment">Comment</label>
-            <textarea class="modal-input modal-input-textarea" name="comment" rows="5" placeholder="Text input" id="comment"></textarea>
+            <textarea class="modal-input modal-input-textarea" name="comment" rows="5" placeholder="Text input"
+                      id="comment"></textarea>
             <label class="modal-checkbox-overlay" for="privacy">
                 <input class="modal-checkbox" type="checkbox" id="privacy" required>
                 <span class="modal-custom-checkbox"></span>
-                <label class="modal-checkbox-label" for="privacy">I accept the terms and conditions of the <a class="modal-checkbox-link" href="#">Privacy Policy</a></label>
+                <span class="modal-checkbox-label">I accept the terms and conditions of the <a
+                        class="modal-checkbox-link" href="#">Privacy Policy</a></span>
             </label>
             <button class="modal-button" type="button">Send</button>
         </form>
