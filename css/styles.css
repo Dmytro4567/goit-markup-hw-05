@@ -437,7 +437,7 @@ img {
     width: 264px;
 }
 
-.footer-social{
+.footer-social {
     margin-right: 80px;
 }
 
@@ -484,6 +484,7 @@ img {
 
 .footer-subscribe-form {
     display: flex;
+    gap: 24px;
 }
 
 .footer-subscribe-header {
@@ -494,7 +495,7 @@ img {
     margin-bottom: 16px;
 }
 
-.footer-subscribe-email{
+.footer-subscribe-email {
     border: 1px solid #ffffff;
     border-radius: 4px;
     width: 264px;
@@ -506,7 +507,6 @@ img {
     line-height: 2;
     letter-spacing: 0.04em;
     padding-left: 16px;
-    margin-right: 23px;
 }
 
 .footer-subscribe-email:focus {
@@ -517,7 +517,7 @@ img {
     color: #ffffff;
 }
 
-.footer-subscribe-button{
+.footer-subscribe-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -542,7 +542,7 @@ img {
     background: #404BBF;
 }
 
-.footer-subscribe-icon{
+.footer-subscribe-icon {
     margin-left: 16px;
     fill: white;
 }
@@ -561,7 +561,7 @@ img {
 
     opacity: 0;
     pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -570,20 +570,21 @@ img {
 }
 
 .modal {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 24px;
     border-radius: 4px;
-    max-width: 408px;
-    max-height: 80%;
-
+    width: 408px;
+    min-height: 584px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
     overflow-y: auto;
 }
 
 .modal-circle {
-    align-self: end;
     width: 24px;
     height: 24px;
     background-color: #e7e9fc;
@@ -592,10 +593,18 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     cursor: pointer;
-    flex-shrink: 0;
     margin-bottom: 24px;
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-circle:hover, .modal-circle:focus {
+    background-color: #404bbf;
+    border: none;
 }
 
 .modal-circle::before,
