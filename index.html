@@ -432,7 +432,7 @@
         </div>
     </div>
 </footer>
-<div class="modal-overlay is-open">
+<div class="modal-overlay">
     <div class="modal">
         <button type="button" class="modal-circle">
             <svg class="modal-circle-icon" width="8" height="8">
@@ -473,12 +473,19 @@
                 <textarea class="modal-textarea" name="user-comment" placeholder="Text input"
                           id="user-comment"></textarea>
             </div>
-            <label class="modal-checkbox-overlay" for="privacy">
-                <input class="modal-checkbox" type="checkbox" id="privacy" required>
-                <span class="modal-custom-checkbox"></span>
-                <span class="modal-checkbox-label">I accept the terms and conditions of the <a
-                        class="modal-checkbox-link" href="#">Privacy Policy</a></span>
-            </label>
+            <div class="modal-checkbox-overlay">
+                <input class="modal-checkbox visually-hidden" type="checkbox" id="user-privacy" value="true"
+                       name="user-privacy">
+                <label for="user-privacy" class="modal-checkbox-label">
+                    <span class="modal-custom-checkbox">
+                        <svg class="modal-custom-checkbox-privacy" width="10" height="8">
+                            <use href="./images/icons.svg#icon-privacy"></use>
+                        </svg>
+                    </span>
+                    I accept the terms and conditions of the
+                    <a class="modal-checkbox-link" href="#">Privacy Policy</a>
+                </label>
+            </div>
             <button class="modal-button" type="button">Send</button>
         </form>
     </div>
